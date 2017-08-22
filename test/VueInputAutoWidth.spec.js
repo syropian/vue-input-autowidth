@@ -24,15 +24,13 @@ describe("VueInputAutowidth directive", () => {
       template: `<input type="text" v-autowidth="{maxWidth: '960px', minWidth: '20px', comfortZone: 0}" v-model="name" placeholder="Guardian" />`,
       data: { name: "Cayde-6" }
     }).$mount("#app");
-    setTimeout(() => {
-      const originalWidth = vm.$el.getBoundingClientRect().width;
-      vm.name = 'Ikora Ray';
-      setTimeout(() => {
-        const newWidth = vm.$el.getBoundingClientRect().width;
-        expect(newWidth).to.be.above(originalWidth);
-        done();
-      }, 3);
-    }, 0);
+    const originalWidth = vm.$el.getBoundingClientRect().width;
+    vm.name = "Lord Saladin";
+    Vue.nextTick(() => {
+      const newWidth = vm.$el.getBoundingClientRect().width;
+      expect(newWidth).to.be.above(originalWidth);
+      done();
+    });
   });
 });
 
