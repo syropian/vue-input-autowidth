@@ -1,5 +1,5 @@
 export default function(el, binding) {
-  const mirror = document.querySelector(".vue-input-autosize-mirror");
+  const mirror = document.querySelector(`.vue-input-autowidth-mirror-${el.dataset.uuid}`);
   const defaults = { maxWidth: "none", minWidth: "none", comfortZone: 0 };
   const options = Object.assign({}, defaults, binding.value);
 
@@ -15,8 +15,7 @@ export default function(el, binding) {
   }
   mirror.appendChild(document.createTextNode(val));
   let newWidth = mirror.getBoundingClientRect().width + options.comfortZone;
-  // console.log("MIRROR VAL", val);
-  // console.log("MIRROR WIDTH", mirror.getBoundingClientRect().width);
+
   if (newWidth != el.getBoundingClientRect().width) {
     el.style.width = `${newWidth}px`;
   }

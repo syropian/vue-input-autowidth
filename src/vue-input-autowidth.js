@@ -5,10 +5,11 @@ export default {
     if (el.tagName.toLocaleUpperCase() !== "INPUT") {
       throw new Error("v-input-autowidth can only be used on input elements.");
     }
+    el.dataset.uuid = Math.random().toString(36).slice(-5);
   },
   inserted: function(el, binding) {
     let mirror = document.createElement("span");
-    mirror.classList.add("vue-input-autosize-mirror");
+    mirror.classList.add(`vue-input-autowidth-mirror-${el.dataset.uuid}`);
     let styles = window.getComputedStyle(el);
     Object.assign(mirror.style, {
       position: "absolute",
