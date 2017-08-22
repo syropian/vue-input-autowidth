@@ -6,5 +6,23 @@
         "modules": false
       }
     ]
-  ]
+  ],
+  "env": {
+    "testing": {
+      "presets": [
+        ["env", {
+          "targets": {
+            "browsers": ["last 2 versions", "safari >= 7"]
+          },
+          "modules": false
+        }]
+      ],
+      "plugins": [
+        ["transform-runtime", {
+          "polyfill": false,
+          "regenerator": true
+        }]
+      ]
+    }
+  }
 }

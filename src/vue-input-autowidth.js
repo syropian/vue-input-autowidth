@@ -15,7 +15,7 @@ export default {
         top: "-9999px",
         left: "-9999px",
         width: "auto",
-        whiteSpace: "nowrap",
+        whiteSpace: "pre",
         opacity: 0,
         border: styles.getPropertyValue("border"),
         fontSize: styles.getPropertyValue("font-size"),
@@ -38,7 +38,9 @@ export default {
       checkWidth(el, binding);
     }, 0);
   },
-  update: function(el, binding) {
-    checkWidth(el, binding);
+  componentUpdated: function(el, binding,) {
+    setTimeout(() => {
+      checkWidth(el, binding);
+    }, 0);
   }
 };

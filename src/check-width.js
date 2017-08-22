@@ -7,14 +7,16 @@ export default function(el, binding) {
   el.style.minWidth = options.minWidth;
 
   let val = el.value;
-  if (!val) val = el.placeholder || "";
-  mirror.innerHTML = val
-    .replace(/&/g, "&amp;")
-    .replace(/\s/g, "&nbsp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+  if (!val) {
+    val = el.placeholder || "";
+  }
+  while (mirror.childNodes.length) {
+    mirror.removeChild(mirror.childNodes[0]);
+  }
+  mirror.appendChild(document.createTextNode(val));
   let newWidth = mirror.getBoundingClientRect().width + options.comfortZone;
-
+  // console.log("MIRROR VAL", val);
+  // console.log("MIRROR WIDTH", mirror.getBoundingClientRect().width);
   if (newWidth != el.getBoundingClientRect().width) {
     el.style.width = `${newWidth}px`;
   }
