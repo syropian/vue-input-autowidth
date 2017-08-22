@@ -1,4 +1,4 @@
-# vue-input-autowidth
+# vue-input-autowidth [![Build Status](https://travis-ci.org/syropian/vue-input-autowidth.svg?branch=master)](https://travis-ci.org/syropian/vue-input-autowidth)
 
 > A Vue.js directive for adjusting a text input's width to fit its content.
 
