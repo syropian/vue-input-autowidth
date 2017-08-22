@@ -2,7 +2,7 @@
 
 > A Vue.js directive for adjusting a text input's width to fit its content.
 
-## Install
+### Install
 
 ```bash
 $ yarn add vue-input-autowidth
@@ -52,6 +52,19 @@ Default: `0`
 
 The additional space in pixels to add to the far side of the input's content.
 
-## License
+### Development
+
+```bash
+# To run the example
+$ npm run example
+
+# To run the tests
+$ npm test
+
+# To publish the dist file
+$ npm run build
+```
+
+### License
 
 MIT © [Collin Henderson](https://github.com/syropian)
