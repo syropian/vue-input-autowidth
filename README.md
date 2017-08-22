@@ -2,6 +2,8 @@
 
 > A Vue.js directive for adjusting a text input's width to fit its content.
 
+![](http://d.pr/i/lfmNKs+)
+
 ### Install
 
 ```bash

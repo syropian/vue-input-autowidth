@@ -3,7 +3,7 @@
   <h1>vue-input-autowidth</h1>
   <div class="container">
     <input type="text" v-autowidth="{maxWidth: '960px', minWidth: '20px', comfortZone: 0}" v-model="name" placeholder="Watch me change size with my content!" />
-    <pre v-highlightjs="sourceCode"><code class="html"></code></pre>
+    <!-- <pre v-highlightjs="sourceCode"><code class="html"></code></pre> -->
   </div>
   <div class="container">
     <h2>Installation</h2>
