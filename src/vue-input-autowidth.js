@@ -1,3 +1,4 @@
+import "es6-object-assign/auto";
 import checkWidth from "./check-width";
 
 export default {
