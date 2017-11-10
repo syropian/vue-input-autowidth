@@ -43,18 +43,20 @@ export default {
 </script>
 
 <style lang="scss">
-$blue: #21D4FD;
-$purple: #B721FF;
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,600');
+$blue: #21d4fd;
+$purple: #b721ff;
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,600");
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-html, body {
+html,
+body {
   width: 100vw;
   height: 100vh;
-  margin: 0; padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body {
   background-color: $blue;
@@ -62,7 +64,7 @@ body {
   color: #132830;
   display: flex;
   justify-content: center;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Fira Sans", sans-serif;
   padding: 50px;
   a {
     color: $blue;
@@ -70,7 +72,8 @@ body {
 }
 .docs {
   width: 100%;
-  h1, h2 {
+  h1,
+  h2 {
     text-align: center;
   }
   h1 {
@@ -85,7 +88,7 @@ body {
   margin: 25px auto;
   padding: 30px;
   width: 100%;
-  input[type=text] {
+  input[type="text"] {
     transition: border-color 250ms ease;
     appearance: none;
     border-radius: 6px;
@@ -96,8 +99,9 @@ body {
       outline: none;
       border-color: $purple;
     }
-    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-      color: rgba(19,40,48,.54);
+    &::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: rgba(19, 40, 48, 0.54);
     }
   }
 }
