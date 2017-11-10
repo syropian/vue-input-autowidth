@@ -3,9 +3,7 @@
   "version": "1.0.1",
   "description": "A Vue.js directive for adjusting a text input's width to fit its content.",
   "main": "dist/vue-input-autowidth.js",
-  "files": [
-    "dist/vue-input-autowidth.js"
-  ],
+  "files": ["dist/vue-input-autowidth.js"],
   "scripts": {
     "build": "rollup -c",
     "example": "poi",
@@ -13,13 +11,7 @@
     "oldtest": "jest",
     "test": "cross-env NODE_ENV=testing karma start karma.conf.js --single-run"
   },
-  "keywords": [
-    "vue",
-    "input",
-    "autowidth",
-    "autosize",
-    "autogrow"
-  ],
+  "keywords": ["vue", "input", "autowidth", "autosize", "autogrow"],
   "author": "Collin Henderson <collin@syropia.net>",
   "license": "MIT",
   "devDependencies": {
@@ -48,6 +40,8 @@
     "prettier": "^1.5.3",
     "rollup": "^0.47.6",
     "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify": "^2.0.1",
     "sass-loader": "^6.0.6",
     "uglify-js": "^3.0.28",
