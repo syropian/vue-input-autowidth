@@ -4,6 +4,7 @@ function install(Vue, globalOptions) {
   Vue.directive("autowidth", VueInputAutoWidth);
 }
 
+export { default as VueInputAutoWidth } from "./vue-input-autowidth";
 export default install;
 
 if (typeof window !== "undefined" && window.Vue) {

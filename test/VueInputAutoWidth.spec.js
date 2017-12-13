@@ -1,9 +1,8 @@
 import Vue from "vue/dist/vue.js";
-import VueInputAutowidth from "../src";
+import VueInputAutowidthInstall, { VueInputAutoWidth } from "../src";
 
-Vue.use(VueInputAutowidth);
+Vue.use(VueInputAutowidthInstall);
 Vue.config.productionTip = false;
-
 
 describe("VueInputAutowidth directive", () => {
   beforeEach(function() {
@@ -31,6 +30,16 @@ describe("VueInputAutowidth directive", () => {
       expect(newWidth).to.be.above(originalWidth);
       done();
     });
+  });
+
+  it("should render correct contents with local provided directive", () => {
+    const vm = new Vue({
+      template: `<input type="text" v-my-autowidth="{maxWidth: '960px', minWidth: '20px', comfortZone: 0}" v-model="name" placeholder="Guardian" />`,
+      directives: { MyAutowidth: VueInputAutoWidth },
+      data: { name: "Cayde-6" }
+    }).$mount("#app");
+    expect(vm.$el.placeholder).to.equal("Guardian");
+    expect(vm.name).to.equal("Cayde-6");
   });
 });
 
