@@ -9,10 +9,10 @@ export default {
     el.dataset.uuid = Math.random().toString(36).slice(-5);
   },
   inserted: function(el, binding) {
-    let mirror = document.createElement("span");
-    mirror.classList.add(`vue-input-autowidth-mirror-${el.dataset.uuid}`);
+    el.mirror = document.createElement("span");
+    el.mirror.classList.add(`vue-input-autowidth-mirror-${el.dataset.uuid}`);
     let styles = window.getComputedStyle(el);
-    Object.assign(mirror.style, {
+    Object.assign(el.mirror.style, {
       position: "absolute",
       top: "-9999px",
       left: "-9999px",
@@ -36,10 +36,13 @@ export default {
       textTransform: styles.getPropertyValue("text-transform"),
       ariaHidden: true
     });
-    document.body.appendChild(mirror);
+    document.body.appendChild(el.mirror);
     checkWidth(el, binding);
   },
   componentUpdated: function(el, binding) {
     checkWidth(el, binding);
+  },
+  unbind: function(el) {
+    document.body.removeChild(el.mirror);
   }
 };
