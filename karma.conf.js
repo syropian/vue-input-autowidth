@@ -1,11 +1,9 @@
-var webpackConfig = require('./test/setup/webpack.config.test.js')
+var webpackConfig = require("./test/setup/webpack.config.test.js");
 
-module.exports = function (config) {
+module.exports = function(config) {
   config.set({
     frameworks: ["mocha", "chai", "phantomjs-shim"],
-    files: [
-      "./test/**/*.spec.js"
-    ],
+    files: ["./test/**/*.spec.js"],
     preprocessors: {
       "./src/**/*.js": ["webpack", "sourcemap"],
       "./test/**/*.spec.js": ["webpack", "sourcemap"]
@@ -17,4 +15,4 @@ module.exports = function (config) {
       noInfo: true
     }
   });
-}
+};

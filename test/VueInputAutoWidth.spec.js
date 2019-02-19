@@ -18,7 +18,7 @@ describe("VueInputAutowidth directive", () => {
     expect(vm.name).to.equal("Cayde-6");
   });
 
-  it("should change widths when its content is updated", (done) => {
+  it("should change widths when its content is updated", done => {
     const vm = new Vue({
       template: `<input type="text" v-autowidth="{maxWidth: '960px', minWidth: '20px', comfortZone: 0}" v-model="name" placeholder="Guardian" />`,
       data: { name: "Cayde-6" }
@@ -42,4 +42,3 @@ describe("VueInputAutowidth directive", () => {
     expect(vm.name).to.equal("Cayde-6");
   });
 });
-

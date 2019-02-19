@@ -6,7 +6,9 @@ export default {
     if (el.tagName.toLocaleUpperCase() !== "INPUT") {
       throw new Error("v-input-autowidth can only be used on input elements.");
     }
-    el.dataset.uuid = Math.random().toString(36).slice(-5);
+    el.dataset.uuid = Math.random()
+      .toString(36)
+      .slice(-5);
   },
   inserted: function(el, binding) {
     el.mirror = document.createElement("span");
