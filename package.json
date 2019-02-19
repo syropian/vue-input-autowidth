@@ -1,6 +1,6 @@
 {
   "name": "vue-input-autowidth",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Vue.js directive for adjusting a text input's width to fit its content.",
   "repository": "https://github.com/syropian/vue-input-autowidth",
   "main": "dist/vue-input-autowidth.js",
