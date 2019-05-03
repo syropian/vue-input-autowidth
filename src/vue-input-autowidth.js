@@ -35,9 +35,9 @@ export default {
       fontVariantNumeric: styles.getPropertyValue("font-variant-numeric"),
       letterSpacing: styles.getPropertyValue("letter-spacing"),
       padding: styles.getPropertyValue("padding"),
-      textTransform: styles.getPropertyValue("text-transform"),
-      ariaHidden: true
+      textTransform: styles.getPropertyValue("text-transform")
     });
+    el.mirror.setAttribute("aria-hidden", "true");
     document.body.appendChild(el.mirror);
     checkWidth(el, binding);
   },
