@@ -1,6 +1,6 @@
 import Vue from "vue";
 import App from "./App.vue";
-import VueInputAutowidth from "../dist/vue-input-autowidth";
+import VueInputAutowidth from "../src";
 
 Vue.use(VueInputAutowidth);
 

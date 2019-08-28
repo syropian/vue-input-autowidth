@@ -1,27 +1,18 @@
 {
   "presets": [
     [
-      "es2015",
+      "@babel/preset-env",
       {
         "modules": false
       }
     ]
   ],
   "env": {
-    "testing": {
+    "test": {
       "presets": [
-        ["env", {
-          "targets": {
-            "browsers": ["last 2 versions", "safari >= 7"]
-          },
-          "modules": false
-        }]
-      ],
-      "plugins": [
-        ["transform-runtime", {
-          "polyfill": false,
-          "regenerator": true
-        }]
+        [
+          "@babel/preset-env"
+        ]
       ]
     }
   }
