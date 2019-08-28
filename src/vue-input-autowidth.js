@@ -9,36 +9,34 @@ export default {
     el.dataset.uuid = Math.random()
       .toString(36)
       .slice(-5);
+    el.style.boxSizing = "content-box";
   },
   inserted: function(el, binding) {
+    const styles = window.getComputedStyle(el);
+
     el.mirror = document.createElement("span");
-    el.mirror.classList.add(`vue-input-autowidth-mirror-${el.dataset.uuid}`);
-    let styles = window.getComputedStyle(el);
+
     Object.assign(el.mirror.style, {
       position: "absolute",
-      top: "-9999px",
-      left: "-9999px",
-      width: "auto",
+      top: "0",
+      left: "0",
+      visibility: "hidden",
+      height: "0",
+      overflow: "scroll",
       whiteSpace: "pre",
-      opacity: 0,
-      border: styles.getPropertyValue("border"),
-      fontSize: styles.getPropertyValue("font-size"),
-      fontFamily: styles.getPropertyValue("font-family"),
-      fontWeight: styles.getPropertyValue("font-weight"),
-      fontStyle: styles.getPropertyValue("font-style"),
-      fontFeatureSettings: styles.getPropertyValue("font-feature-settings"),
-      fontKerning: styles.getPropertyValue("font-kerning"),
-      fontStretch: styles.getPropertyValue("font-stretch"),
-      fontVariant: styles.getPropertyValue("font-variant"),
-      fontVariantCaps: styles.getPropertyValue("font-variant-caps"),
-      fontVariantLigatures: styles.getPropertyValue("font-variant-ligatures"),
-      fontVariantNumeric: styles.getPropertyValue("font-variant-numeric"),
-      letterSpacing: styles.getPropertyValue("letter-spacing"),
-      padding: styles.getPropertyValue("padding"),
-      textTransform: styles.getPropertyValue("text-transform")
+      fontSize: styles.fontSize,
+      fontFamily: styles.fontFamily,
+      fontWeight: styles.fontWeight,
+      fontStyle: styles.fontStyle,
+      letterSpacing: styles.letterSpacing,
+      textTransform: styles.textTransform
     });
+
+    el.mirror.classList.add(`vue-input-autowidth-mirror-${el.dataset.uuid}`);
     el.mirror.setAttribute("aria-hidden", "true");
+
     document.body.appendChild(el.mirror);
+
     checkWidth(el, binding);
   },
   componentUpdated: function(el, binding) {

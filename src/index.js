@@ -1,12 +1,13 @@
 import VueInputAutoWidth from "./vue-input-autowidth";
 
-function install(Vue, globalOptions) {
+const install = function(Vue) {
   Vue.directive("autowidth", VueInputAutoWidth);
-}
-
-export { default as VueInputAutoWidth } from "./vue-input-autowidth";
-export default install;
+};
 
 if (typeof window !== "undefined" && window.Vue) {
   window.Vue.use(install);
 }
+
+VueInputAutoWidth.install = install;
+
+export default VueInputAutoWidth;
