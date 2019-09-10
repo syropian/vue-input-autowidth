@@ -4,6 +4,8 @@
 
 ![](http://d.pr/i/lfmNKs+)
 
+**[Demo](https://syropian.github.io/vue-input-autowidth/)**
+
 ### Install
 
 ```bash
