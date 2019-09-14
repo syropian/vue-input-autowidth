@@ -48,7 +48,7 @@ var directive = {
       left: "0",
       visibility: "hidden",
       height: "0",
-      overflow: "scroll",
+      overflow: "hidden",
       whiteSpace: "pre",
       fontSize: styles.fontSize,
       fontFamily: styles.fontFamily,

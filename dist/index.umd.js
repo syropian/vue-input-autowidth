@@ -1,7 +1,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global = global || self, global.VueInputAutoWidth = factory());
+  (global = global || self, global.VueInputAutowidth = factory());
 }(this, function () { 'use strict';
 
   /**
@@ -97,7 +97,7 @@
         left: "0",
         visibility: "hidden",
         height: "0",
-        overflow: "scroll",
+        overflow: "hidden",
         whiteSpace: "pre",
         fontSize: styles.fontSize,
         fontFamily: styles.fontFamily,

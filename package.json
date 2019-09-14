@@ -4,7 +4,7 @@
   "description": "A Vue.js directive for adjusting a text input's width to fit its content.",
   "repository": "https://github.com/syropian/vue-input-autowidth",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "module": "dist/index.js",
   "unpkg": "dist/index.umd.min.js",
   "files": [
     "dist"
