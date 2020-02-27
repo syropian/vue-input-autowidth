@@ -15,12 +15,21 @@
       <pre v-highlightjs><code class="shell">$ yarn add vue-input-autowidth</code></pre>
       <p>or</p>
       <pre v-highlightjs><code class="shell">$ npm install --save vue-input-autowidth</code></pre>
-      <p>or grab it from Unpkg: <a href="https://unpkg.com/vue-input-autowidth">https://unpkg.com/vue-input-autowidth</a></p>
-      <br>
+      <p>
+        or grab it from Unpkg:
+        <a href="https://unpkg.com/vue-input-autowidth">https://unpkg.com/vue-input-autowidth</a>
+      </p>
+      <br />
       <h2>Options</h2>
-      <p><strong>maxWidth | String:</strong> Sets the maximum width the input element will stretch to.</p>
-      <p><strong>minWidth | String:</strong> Sets the minimum width the input element will shrink to.</p>
-      <p><strong>comfortZone | Number:</strong> Additional space in pixels to add to the far side of the input's content.</p>
+      <p>
+        <strong>maxWidth | String:</strong> Sets the maximum width the input element will stretch to.
+      </p>
+      <p>
+        <strong>minWidth | String:</strong> Sets the minimum width the input element will shrink to.
+      </p>
+      <p>
+        <strong>comfortZone | Number:</strong> Additional space in pixels to add to the far side of the input's content.
+      </p>
     </div>
   </div>
 </template>
