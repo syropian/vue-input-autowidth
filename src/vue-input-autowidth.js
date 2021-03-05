@@ -48,7 +48,7 @@ export default {
   componentUpdated: function(el, binding) {
     checkWidth(el, binding);
   },
-  unbind: function(el) {
+  unbind: function(el, binding) {
     document.body.removeChild(el.mirror);
     el.removeEventListener("input", checkWidth.bind(null, el, binding));
   }
