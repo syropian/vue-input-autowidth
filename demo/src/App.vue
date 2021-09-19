@@ -59,28 +59,28 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { Ref, ref } from "vue";
+<script setup>
+import { ref } from "vue";
 
-const msg: Ref<string> = ref("");
+const msg = ref("");
 
 const installCode = ref(`$ npm install vue-input-autowidth@next --save
 # or...
 $ yarn add vue-input-autowidth@next`);
 const addGlobalCode = ref(`import { createApp } from 'vue'
 import App from './App.vue'
-import VueInputAutowidth from 'vue-input-autowidth'
+import { plugin as VueInputAutowidth } from 'vue-input-autowidth'
 
 createApp(App).use(VueInputAutowidth).mount("#app")
 `);
 const perComponentCode = `import { directive as VueInputAutowidth } from 'vue-input-autowidth'
 
-export default defineComponent({
+export default {
   directives: { autowidth: VueInputAutowidth },
   setup() {
     ...
   },
-})`;
+}`;
 const useDirectiveCode = `<input
   type="text"
   placeholder="Watch me change size with my content!"
