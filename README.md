@@ -1,77 +1,20 @@
-# vue-input-autowidth [![Actions Status](https://github.com/syropian/vue-input-autowidth/workflows/Tests/badge.svg)](https://github.com/syropian/vue-input-autowidth/actions)
+# vue-input-autowidth
 
-> A Vue.js directive for adjusting a text input's width to fit its content.
+A Vue.js directive for adjusting a text input's width to fit its content.
 
-![](http://d.pr/i/lfmNKs+)
-
-**[Demo](https://syropian.github.io/vue-input-autowidth/)**
-
-### Install
+## Installation
 
 ```bash
-$ yarn add vue-input-autowidth
+npm install vue-input-autowidth@next --save
+# or...
+yarn add vue-input-autowidth@next
 ```
 
-or
+_or_
 
-```bash
-$ npm install --save vue-input-autowidth
+Use the UMD build from [Unpkg](https://unpkg.com/vue-input-autowidth), available as `VueInputAutowidth` in the global scope.
+
+```html
+<script src="/vendor/vue.js">
+<script src="https://unpkg.com/vue-input-autowidth">
 ```
-
-It's also available on Unpkg: https://unpkg.com/vue-input-autowidth
-
-### Usage
-
-```js
-import VueInputAutowidth from 'vue-input-autowidth'
-
-Vue.use(VueInputAutowidth)
-
-// and in your template...
-<input
-  type="text"
-  v-autowidth="{maxWidth: '960px', minWidth: '20px', comfortZone: 0}"
-  v-model="name"
-  placeholder="Watch me change size with my content!"
-/>
-```
-
-### Options
-
-#### maxWidth
-
-Type: `String`
-Default: `'none'`
-
-The maximum width the input field will grow to.
-
-#### minWidth
-
-Type: `String`
-Default: `'none'`
-
-The minimum width the input field will shrink to.
-
-#### comfortZone
-
-Type: `Number`
-Default: `0`
-
-The additional space in pixels to add to the far side of the input's content.
-
-### Development
-
-```bash
-# To run the example
-$ npm run example
-
-# To run the tests
-$ npm test
-
-# To publish the dist file
-$ npm run build
-```
-
-### License
-
-MIT © [Collin Henderson](https://github.com/syropian)
