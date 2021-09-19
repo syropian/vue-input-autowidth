@@ -16,7 +16,7 @@ Use the UMD build from [Unpkg](https://unpkg.com/vue-input-autowidth), available
 
 ```html
 <script src="/vendor/vue.js" />
-<script src="https://unpkg.com/vue-input-autowidth" />
+<script src="https://unpkg.com/vue-input-autowidth@next" />
 ```
 
 ## Usage
