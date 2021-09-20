@@ -1,6 +1,6 @@
 # vue-input-autowidth [![Actions Status](https://github.com/syropian/vue-input-autowidth/workflows/Tests/badge.svg)](https://github.com/syropian/vue-input-autowidth/actions)
 
-> A Vue.js directive for adjusting a text input's width to fit its content.
+> A Vue.js directive that automatically resizes an input's width to fit its contents.
 
 ![](http://d.pr/i/lfmNKs+)
 
