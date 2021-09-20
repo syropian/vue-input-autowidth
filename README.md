@@ -1,6 +1,6 @@
 # vue-input-autowidth
 
-A Vue.js directive that resizes an input's width to fit its contents.
+A Vue.js directive that automatically resizes an input's width to fit its contents.
 
 ## Installation
 

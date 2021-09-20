@@ -18,11 +18,17 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build && tsc --declaration --emitDeclarationOnly --outDir dist",
     "serve": "vite preview",
+    "test": "start-server-and-test demo http-get://localhost:3001 cypress",
+    "cypress": "cypress run",
     "demo": "cd demo && vite",
-    "demo:build": "cd demo && vite build"
+    "demo:build": "cd demo && vite build",
+    "postinstall": "cd demo && yarn"
   },
   "devDependencies": {
+    "@types/jest": "^27.0.1",
     "@types/node": "^16.9.2",
+    "cypress": "^8.4.1",
+    "start-server-and-test": "^1.14.0",
     "typescript": "^4.3.2",
     "vite": "^2.5.4",
     "vue": "^3.2.12",
