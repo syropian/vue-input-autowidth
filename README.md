@@ -6,6 +6,8 @@
 
 **[Demo](https://syropian.github.io/vue-input-autowidth/)**
 
+> 🚦 Looking for Vue 3 support? Check out the [v2 branch](https://github.com/syropian/vue-input-autowidth/tree/v2).
+
 ### Install
 
 ```bash
