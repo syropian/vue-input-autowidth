@@ -1,8 +1,6 @@
 <template>
   <div class="px-8 my-32 md:px-0">
-    <div
-      class="flex items-center justify-between w-full mx-auto mt-8 max-w-prose"
-    >
+    <div class="flex items-center justify-between w-full mx-auto mt-8 max-w-prose">
       <h1 class="text-4xl font-bold">
         <span class="relative inline-block top-1">↔️</span>
         <span class="inline-block ml-2">vue-input-autowidth</span>
@@ -33,13 +31,7 @@
       </nav>
     </div>
     <div class="w-full mx-auto mt-8 max-w-prose">
-      <input
-        type="text"
-        class="input"
-        placeholder="Watch me change size with my content!"
-        v-model="msg"
-        v-autowidth
-      />
+      <input v-model="msg" v-autowidth type="text" class="input" placeholder="Watch me change size with my content!" />
     </div>
     <div class="w-full mx-auto mt-8 prose max-w-prose">
       <h2>Install</h2>
@@ -57,42 +49,40 @@
       <p>You can pass various options to the directive</p>
       <highlightjs language="xml" :code="showOptionsCode" />
       <input
-        type="text"
-        class="input"
-        placeholder="An example with custom options"
         v-model="msg"
         v-autowidth="{
           minWidth: '75px',
           maxWidth: '75%',
           comfortZone: '1ch',
         }"
+        type="text"
+        class="input"
+        placeholder="An example with custom options"
       />
 
       <footer>
-        <p class="text-gray-500">
-          &copy; {{ new Date().getFullYear() }} Collin Henderson
-        </p>
+        <p class="text-gray-500">&copy; {{ new Date().getFullYear() }} Collin Henderson</p>
       </footer>
     </div>
   </div>
 </template>
 
 <script>
-import { ref } from "vue";
+import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
   setup() {
-    const msg = ref("");
+    const msg = ref('')
 
     const installCode = ref(`$ npm install vue-input-autowidth@next --save
 # or...
-$ yarn add vue-input-autowidth@next`);
+$ yarn add vue-input-autowidth@next`)
     const addGlobalCode = ref(`import { createApp } from 'vue'
 import App from './App.vue'
 import { plugin as VueInputAutowidth } from 'vue-input-autowidth'
 
 createApp(App).use(VueInputAutowidth).mount("#app")
-`);
+`)
     const perComponentCode = `import { directive as VueInputAutowidth } from 'vue-input-autowidth'
 
 export default {
@@ -100,13 +90,13 @@ export default {
   setup() {
     ...
   },
-}`;
+}`
     const useDirectiveCode = `<input
   type="text"
   placeholder="Watch me change size with my content!"
   v-model="msg"
   v-autowidth
-/>`;
+/>`
 
     const showOptionsCode = ref(`<input
   type="text"
@@ -117,7 +107,7 @@ export default {
     maxWidth: '75%',
     comfortZone: '1ch',
   }"
-/>`);
+/>`)
     return {
       msg,
       installCode,
@@ -125,9 +115,9 @@ export default {
       perComponentCode,
       useDirectiveCode,
       showOptionsCode,
-    };
+    }
   },
-});
+})
 </script>
 
 <style>

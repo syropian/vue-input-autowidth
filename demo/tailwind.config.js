@@ -1,6 +1,6 @@
 module.exports = {
-  mode: "jit",
-  purge: ["./index.html", "./src/**/*.{vue,js,ts}"],
+  mode: 'jit',
+  purge: ['./index.html', './src/**/*.{vue,js,ts}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
@@ -8,5 +8,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/typography")],
-};
+  plugins: [require('@tailwindcss/typography')],
+}

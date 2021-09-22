@@ -14,12 +14,5 @@
     "allowJs": true,
     "types": ["node", "vite/client"]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.vue",
-    "vite.config.ts",
-    "sandbox/**/*.ts",
-    "sandbox/**/*.d.ts"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue", "vite.config.ts", "sandbox/**/*.ts", "sandbox/**/*.d.ts"]
 }

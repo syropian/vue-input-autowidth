@@ -1,54 +1,38 @@
 <template>
   <div>
-    <input
-      type="text"
-      class="input"
-      placeholder="Watch me change size with my content!"
-      v-model="msg"
-      v-autowidth
-    />
+    <input v-model="msg" v-autowidth type="text" class="input" placeholder="Watch me change size with my content!" />
+  </div>
+
+  <div>
+    <input v-model="msg" v-autowidth="{ minWidth: '75px', maxWidth: '100px' }" type="text" class="input" />
   </div>
 
   <div>
     <input
-      type="text"
-      class="input"
       v-model="msg"
-      v-autowidth="{ minWidth: '75px', maxWidth: '100px' }"
-    />
-  </div>
-
-  <div>
-    <input
-      type="text"
-      class="input"
-      v-model="msg"
-      placeholder="Watch me change size with my content!"
       v-autowidth="{ comfortZone: '10px' }"
+      type="text"
+      class="input"
+      placeholder="Watch me change size with my content!"
     />
   </div>
 
   <div>
-    <input
-      type="text"
-      class="input"
-      placeholder="Watch me change size with my content!"
-      v-autowidth
-    />
+    <input v-autowidth type="text" class="input" placeholder="Watch me change size with my content!" />
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
   setup() {
-    const msg = ref("");
+    const msg = ref('')
     return {
       ref,
       msg,
-    };
+    }
   },
-});
+})
 </script>
 
 <style>
