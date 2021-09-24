@@ -67,15 +67,17 @@ export default defineComponent({
   setup() {
     const msg = ref('')
 
-    const installCode = ref(`$ npm install vue-input-autowidth@next --save
+    const installCode = `$ npm install vue-input-autowidth@next --save
 # or...
-$ yarn add vue-input-autowidth@next`)
-    const addGlobalCode = ref(`import { createApp } from 'vue'
+$ yarn add vue-input-autowidth@next`
+
+    const addGlobalCode = `import { createApp } from 'vue'
 import App from './App.vue'
 import { plugin as VueInputAutowidth } from 'vue-input-autowidth'
 
 createApp(App).use(VueInputAutowidth).mount("#app")
-`)
+`
+
     const perComponentCode = `import { directive as VueInputAutowidth } from 'vue-input-autowidth'
 
 export default {
@@ -84,6 +86,7 @@ export default {
     ...
   },
 }`
+
     const useDirectiveCode = `<input
   type="text"
   placeholder="Watch me change size with my content!"
@@ -91,7 +94,7 @@ export default {
   v-autowidth
 />`
 
-    const showOptionsCode = ref(`<input
+    const showOptionsCode = `<input
   type="text"
   placeholder="An example with custom options"
   v-model="msg"
@@ -100,7 +103,7 @@ export default {
     maxWidth: '75%',
     comfortZone: '1ch',
   }"
-/>`)
+/>`
     return {
       msg,
       installCode,

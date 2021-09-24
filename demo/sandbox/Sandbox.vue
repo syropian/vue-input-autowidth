@@ -21,18 +21,10 @@
     <input v-autowidth type="text" class="input" placeholder="Watch me change size with my content!" />
   </div>
 </template>
-<script lang="ts">
-import { defineComponent, ref } from 'vue'
+<script lang="ts" setup>
+import { ref } from 'vue'
 
-export default defineComponent({
-  setup() {
-    const msg = ref('')
-    return {
-      ref,
-      msg,
-    }
-  },
-})
+const msg = ref('')
 </script>
 
 <style>
