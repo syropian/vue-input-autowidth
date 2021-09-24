@@ -13,14 +13,5 @@
     "lib": ["esnext", "dom"],
     "types": ["node", "vite/client", "cypress"]
   },
-  "include": [
-    "vite.config.ts",
-    "env.d.ts",
-    "lib/**/*.ts",
-    "demo/**/*.ts",
-    "demo/**/*.vue",
-    "sandbox/**/*.ts",
-    "sandbox/**/*.vue",
-    "tests/**/*.ts"
-  ]
+  "include": ["vite.config.ts", "env.d.ts", "lib/**/*.ts", "demo/**/*.ts", "demo/**/*.vue", "tests/**/*.ts"]
 }

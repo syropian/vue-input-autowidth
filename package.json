@@ -21,7 +21,8 @@
     "test": "start-test dev http://localhost:3000/sandbox/index.html cypress",
     "cypress": "cypress run",
     "lint": "eslint --ext .ts,vue --ignore-path .gitignore ./lib ./sandbox ./demo ./tests",
-    "format": "prettier ./lib ./sandbox ./demo ./tests  -w -u"
+    "format": "prettier ./lib ./sandbox ./demo ./tests  -w -u",
+    "serve": "vite preview"
   },
   "devDependencies": {
     "@highlightjs/vue-plugin": "^2.1.0",

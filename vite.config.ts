@@ -7,9 +7,17 @@ const resolvePath = (str: string) => resolve(__dirname, str)
 const isProd = process.env.NODE_ENV === 'production'
 
 const devConfig = defineConfig({
+  root: './demo',
   plugins: [vue()],
   build: {
-    outDir: 'dist-demo',
+    outDir: '../dist-demo',
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'demo/index.html'),
+        sandbox: resolve(__dirname, 'demo/sandbox/index.html'),
+      },
+    },
   },
 })
 
