@@ -20,4 +20,4 @@ jobs:
         with:
           start: yarn dev
           command: yarn cypress
-          wait-on: 'http://localhost:3000'
+          wait-on: 'http://localhost:3000/sandbox/index.html'
