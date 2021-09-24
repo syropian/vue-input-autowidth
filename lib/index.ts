@@ -1,7 +1,9 @@
 import directive from './directive'
+import type { InputAutoWidthOptions } from './directive'
 import { App } from 'vue'
 
 export { directive }
+export type { InputAutoWidthOptions }
 
 export const plugin = {
   install: (app: App) => {

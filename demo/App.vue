@@ -1,9 +1,9 @@
 <template>
   <div class="px-8 my-32 md:px-0">
     <div class="flex items-center justify-between w-full mx-auto mt-8 max-w-prose">
-      <h1 class="text-4xl font-bold">
-        <span class="relative inline-block top-1">↔️</span>
-        <span class="inline-block ml-2">vue-input-autowidth</span>
+      <h1 class="flex items-center text-4xl font-bold">
+        <Logo class="text-purple-500 w-auto h-8 fill-current relative top-0.5" aria-hidden="true" />
+        <span class="inline-block ml-4 text-gray-600">vue-input-autowidth</span>
       </h1>
       <nav class="flex items-center">
         <a
@@ -11,22 +11,9 @@
           target="_blank"
           rel="noopener noreferrer"
           class="inline-block transition-colors hover:text-purple-500"
+          aria-label="GitHub"
         >
-          <svg
-            viewBox="0 0 24 24"
-            width="24"
-            height="24"
-            stroke="currentColor"
-            stroke-width="2"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="css-i6dzq1"
-          >
-            <path
-              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-            ></path>
-          </svg>
+          <GitHubIcon class="w-6 h-6 stroke-current" />
         </a>
       </nav>
     </div>
@@ -69,8 +56,14 @@
 
 <script>
 import { defineComponent, ref } from 'vue'
+import Logo from './Logo.vue'
+import GitHubIcon from './GitHubIcon.vue'
 
 export default defineComponent({
+  components: {
+    Logo,
+    GitHubIcon,
+  },
   setup() {
     const msg = ref('')
 

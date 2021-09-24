@@ -13,35 +13,40 @@
       "require": "./dist/vue-input-autowidth.umd.js"
     }
   },
-  "types": "./dist/directive.d.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build && tsc --declaration --emitDeclarationOnly --outDir dist",
-    "serve": "vite preview",
-    "test": "start-server-and-test demo http-get://localhost:3001 cypress",
+    "build": "vue-tsc --noEmit && vite build",
+    "build:demo": "vite build --mode demo",
+    "test": "start-test dev http://localhost:3000/sandbox/index.html cypress",
     "cypress": "cypress run",
-    "lint": "eslint --ext .ts,vue --ignore-path .gitignore ./src ./demo ./tests",
-    "format": "prettier ./src ./demo ./tests  -w -u",
-    "demo": "cd demo && vite",
-    "demo:build": "cd demo && vite build",
-    "postinstall": "cd demo && yarn"
+    "lint": "eslint --ext .ts,vue --ignore-path .gitignore ./lib ./sandbox ./demo ./tests",
+    "format": "prettier ./lib ./sandbox ./demo ./tests  -w -u"
   },
   "devDependencies": {
-    "@types/jest": "^27.0.1",
+    "@highlightjs/vue-plugin": "^2.1.0",
+    "@tailwindcss/typography": "^0.4.1",
     "@types/node": "^16.9.2",
     "@typescript-eslint/eslint-plugin": "^4.31.2",
     "@typescript-eslint/parser": "^4.31.2",
+    "@vitejs/plugin-vue": "^1.9.1",
+    "@vue/compiler-sfc": "^3.2.16",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
+    "autoprefixer": "^10.3.5",
     "cypress": "^8.4.1",
     "eslint": "^7.32.0",
-    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^7.18.0",
+    "highlight.js": "^11.2.0",
+    "postcss": "^8.3.7",
     "prettier": "2.4.1",
     "start-server-and-test": "^1.14.0",
+    "tailwindcss": "^2.2.15",
     "typescript": "^4.3.2",
     "vite": "^2.5.4",
-    "vue": "^3.2.12",
-    "vue-tsc": "^0.2.2"
+    "vite-plugin-dts": "^0.8.1",
+    "vue": "^3.2.16",
+    "vue-tsc": "^0.3.0"
   }
 }

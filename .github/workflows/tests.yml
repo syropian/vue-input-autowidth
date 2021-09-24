@@ -18,6 +18,6 @@ jobs:
       - name: Cypress tests
         uses: cypress-io/github-action@v2
         with:
-          start: yarn demo
+          start: yarn dev
           command: yarn cypress
-          wait-on: "http://localhost:3001"
+          wait-on: 'http://localhost:3000'
