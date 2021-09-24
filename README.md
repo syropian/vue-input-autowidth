@@ -5,6 +5,8 @@ A Vue.js directive that automatically resizes an input's width to fit its conten
 
 > 🚦 Looking for Vue 2 support? Check out the [master branch](https://github.com/syropian/vue-input-autowidth).
 
+#### [See demo](https://vue-input-autowidth.netlify.app/)
+
 ## Installation
 
 ```bash
