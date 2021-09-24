@@ -54,7 +54,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent, ref } from 'vue'
 import Logo from './Logo.vue'
 import GitHubIcon from './GitHubIcon.vue'
@@ -93,7 +93,7 @@ export default {
 
     const showOptionsCode = ref(`<input
   type="text"
-  placeholder="Watch me change size with my content!"
+  placeholder="An example with custom options"
   v-model="msg"
   v-autowidth="{
     minWidth: '75px',
