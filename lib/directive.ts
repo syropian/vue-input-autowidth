@@ -24,7 +24,7 @@ const defaults: Complete<InputAutoWidthOptions> = {
   maxWidth: undefined,
   minWidth: undefined,
   comfortZone: '0px',
-  watchWindowSize: true,
+  watchWindowSize: false,
   windowResizeHandlerDebounceTime: 150,
   disableNonInputWarning: false,
 } as const

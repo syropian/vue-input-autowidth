@@ -1,6 +1,5 @@
 # vue-input-autowidth ![tests](https://github.com/syropian/vue-input-autowidth/workflows/tests/badge.svg?branch=v2)
 
-
 A Vue.js directive that automatically resizes an input's width to fit its contents.
 
 > 🚦 Looking for Vue 2 support? Check out the [master branch](https://github.com/syropian/vue-input-autowidth).
@@ -31,11 +30,11 @@ Use the UMD build from [Unpkg](https://unpkg.com/vue-input-autowidth), available
 Import and register the directive in your app's entrypoint.
 
 ```js
-import { createApp } from "vue";
-import App from "./App.vue";
-import { plugin as VueInputAutowidth } from "vue-input-autowidth";
+import { createApp } from 'vue'
+import App from './App.vue'
+import { plugin as VueInputAutowidth } from 'vue-input-autowidth'
 
-createApp(App).use(VueInputAutowidth).mount("#app");
+createApp(App).use(VueInputAutowidth).mount('#app')
 ```
 
 ### Per-component
@@ -77,6 +76,17 @@ You can also pass some options:
   />
 </template>
 ```
+
+## Available Options
+
+| Name                                | Type      | Default Value | Description                                                                                                             |
+| ----------------------------------- | --------- | ------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **maxWidth**                        | `string`  | `undefined`   | Sets the `max-width` CSS property on the element. The value should be a valid CSS size and unit.                        |
+| **minWidth**                        | `string`  | `undefined`   | Sets the `min-width` CSS property on the element. The value should be a valid CSS size and unit.                        |
+| **comfortZone**                     | `string`  | `0px`         | Uses CSS `calc()` to add the specificied amount to the calculated width. The value should be a valid CSS size and unit. |
+| **watchWindowSize**                 | `boolean` | `false`       | When enabled, the directive will listen to the window resize event, and resize the input if needed.                     |
+| **windowResizeHandlerDebounceTime** | `number`  | `150`         | The debounce time in milliseconds for the window resize event. Only applies if `watchWindowSize` is `true`.             |
+| **disableNonInputWarning**          | `boolean` | `false`       | Disables the console warning if you try and use the directive on a non-input element.                                   |
 
 ## License
 
