@@ -8,7 +8,7 @@ interface AutowidthInput extends HTMLInputElement {
   mirror: HTMLElement
   options: Complete<InputAutoWidthOptions>
   windowResizeHandler?: () => void
-  sizerFunc?: (e?: Event) => () => void
+  sizerFunc?: (_e?: Event | undefined) => void
 }
 
 export interface InputAutoWidthOptions {
@@ -113,7 +113,7 @@ export default {
   mounted: function (el: AutowidthInput, binding: DirectiveBinding, vnode: VNode) {
     const hasVModel = Object.prototype.hasOwnProperty.call(vnode.props, '@onUpdate:modelValue')
 
-    el.sizerFunc = (_e?: Event) => checkWidth.bind(null, el)
+    el.sizerFunc = (_e?: Event) => checkWidth(el)
 
     el.mirror = document.createElement('div')
     copyStylesToMirror(el)
@@ -134,7 +134,7 @@ export default {
   },
   updated: function (el: AutowidthInput) {
     if (el.sizerFunc) {
-      el.sizerFunc()()
+      el.sizerFunc()
     }
   },
   unmounted: function (el: AutowidthInput) {
