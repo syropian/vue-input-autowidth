@@ -1,9 +1,25 @@
 module.exports = {
   mode: 'jit',
   purge: ['./{demo,sandbox}/**/*.{ts,vue,html}'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      typography: theme => ({
+        dark: {
+          css: {
+            h2: {
+              color: theme('colors.gray.200'),
+            },
+            h3: {
+              color: theme('colors.gray.300'),
+            },
+            p: {
+              color: theme('colors.gray.400'),
+            },
+          },
+        },
+      }),
+    },
   },
   variants: {
     extend: {},
