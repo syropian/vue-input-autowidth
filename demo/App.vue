@@ -57,29 +57,35 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref } from 'vue'
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
 import Logo from './Logo.vue'
 import GitHubIcon from './GitHubIcon.vue'
 import { InputAutoWidthOptions } from '../lib'
 
-const msg = ref('')
-const options: InputAutoWidthOptions = {
-  watchWindowSize: true,
-}
+export default defineComponent({
+  components: {
+    Logo,
+    GitHubIcon,
+  },
+  setup() {
+    const msg = ref('')
+    const options: InputAutoWidthOptions = {
+      watchWindowSize: true,
+    }
 
-const installCode = `$ npm install vue-input-autowidth@next --save
+    const installCode = `$ npm install vue-input-autowidth@next --save
 # or...
 $ yarn add vue-input-autowidth@next`
 
-const addGlobalCode = `import { createApp } from 'vue'
+    const addGlobalCode = `import { createApp } from 'vue'
 import App from './App.vue'
 import { plugin as VueInputAutowidth } from 'vue-input-autowidth'
 
 createApp(App).use(VueInputAutowidth).mount("#app")
 `
 
-const perComponentCode = `import { directive as VueInputAutowidth } from 'vue-input-autowidth'
+    const perComponentCode = `import { directive as VueInputAutowidth } from 'vue-input-autowidth'
 
 export default {
   directives: { autowidth: VueInputAutowidth },
@@ -88,14 +94,14 @@ export default {
   },
 }`
 
-const useDirectiveCode = `<input
+    const useDirectiveCode = `<input
   type="text"
   placeholder="Watch me change size with my content!"
   v-model="msg"
   v-autowidth
 />`
 
-const showOptionsCode = `<input
+    const showOptionsCode = `<input
   type="text"
   placeholder="An example with custom options"
   v-model="msg"
@@ -106,6 +112,19 @@ const showOptionsCode = `<input
     watchWindowSize: true,
   }"
 />`
+    return {
+      Logo,
+      GitHubIcon,
+      msg,
+      options,
+      installCode,
+      addGlobalCode,
+      perComponentCode,
+      useDirectiveCode,
+      showOptionsCode,
+    }
+  },
+})
 </script>
 
 <style>
