@@ -9,6 +9,7 @@
   "module": "./dist/vue-input-autowidth.es.js",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/vue-input-autowidth.es.js",
       "require": "./dist/vue-input-autowidth.umd.js"
     }
